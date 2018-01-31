@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is part of Ellen Wondra's application to work at Auction Edge.
 
-Things you may want to cover:
+It assumes you have Rails correctly installed on your machine.
 
-* Ruby version
+## To run:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* install gems with `bundle install`
+* `rails s`
+* navigate to [localhost:3000](http://localhost:3000)
