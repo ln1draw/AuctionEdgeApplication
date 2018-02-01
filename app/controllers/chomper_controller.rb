@@ -5,10 +5,13 @@ class ChomperController < ApplicationController
 
   def create
     CSV.foreach(params["auctions"].path, {headers: :first_row}) do |row|
-      data = row.to_h
-      a = Auction.create_with(Auction.parse_auction_data(data)).find_or_create_by(name: data['auction name'])
-      v = Vehicle.create_with(Vehicle.parse_vehicle_data(data)).find_or_create_by(stock_number: data['vehicle stock number'])
-      a.vehicles << v
+      unless row.empty?
+        data = row.to_h
+        binding.pry if data['auction name'].nil?
+        a = Auction.create_with(Auction.parse_auction_data(data)).find_or_create_by(name: data['auction name'])
+        a.save
+        a.vehicles.create(Vehicle.parse_vehicle_data(data))
+      end
     end
 
     redirect_to(action: 'index')

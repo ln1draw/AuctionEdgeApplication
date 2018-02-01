@@ -1,8 +1,14 @@
-<% @auctions.each do |a| %>
-  <p>
-    <%= a.inspect %>
-    <% a.vehicles.each do |v| %>
-      <%= v.inspect %>
-    <% end %>
-  </p>
-<% end %>
+<ul>
+  <% @auctions.each do |a| %>
+    <li>
+      <br>
+      <h5><%= a.name + ', ' + a.city %></h5>
+      <br>
+      Sold <%= a.vehicles.count %> vehicles
+      <br>
+      Made <%= a.profits %>
+      <br>
+      Averaged <%= a.profits / a.vehicles.count %>
+    </li>
+  <% end %>
+</ul>

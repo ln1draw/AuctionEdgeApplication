@@ -24,13 +24,14 @@ ActiveRecord::Schema.define(version: 20180131231434) do
 
   create_table "vehicles", force: :cascade do |t|
     t.integer  "auction_id"
-    t.string   "year"
+    t.integer  "year"
     t.string   "make"
     t.string   "model"
-    t.string   "stock_number"
-    t.string   "winning_bid"
-    t.string   "seller_payout"
+    t.integer  "stock_number"
+    t.integer  "winning_bid"
+    t.integer  "seller_payout"
     t.string   "description"
+    t.integer  "profit"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.index ["auction_id"], name: "index_vehicles_on_auction_id"

@@ -13,13 +13,14 @@ class CreateAuctionAndVehicle < ActiveRecord::Migration[5.0]
     create_table :vehicles do |t|
       t.belongs_to :auction, index: true
 
-      t.string :year
+      t.integer :year
       t.string :make
       t.string :model
-      t.string :stock_number
-      t.string :winning_bid
-      t.string :seller_payout
+      t.integer :stock_number
+      t.integer :winning_bid
+      t.integer :seller_payout
       t.string :description
+      t.integer :profit
 
       t.timestamps
     end

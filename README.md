@@ -17,6 +17,4 @@ For the purposes of this test, I assumed that every auction has a unique name. T
 necessarily true. In a real-life scenario, I would want much better differentiation between
 auctions in my code.
 
-Additionally, I stored everything as strings in the database since the CSV will always initially read as strings. It removes a small level of complication for the purposes of this test. In a real-world situation, several fields like the year and stock number will be integers.
-
 In a real-world scenario, I would want an additional Sale table. The sale table would be a join table between the vehicle and the auction tables, and would also include information like the payout and other data that we might want to preserve if a vehicle is sold multiple times.
