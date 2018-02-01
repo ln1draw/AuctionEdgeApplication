@@ -1,14 +1,17 @@
-<ul>
-  <% @auctions.each do |a| %>
-    <li>
-      <br>
+<% @auctions.each do |a| %>
+  <div class="list-group">
+    <div class="list-group-item list-group-item-secondary">
       <h5><%= a.name + ', ' + a.city %></h5>
-      <br>
+    </div>
+
+    <div class="list-group-item">
       Sold <%= a.vehicles.count %> vehicles
-      <br>
+    </div>
+    <div class="list-group-item">
       Made <%= a.profits %>
-      <br>
+    </div>
+    <div class="list-group-item">
       Averaged <%= a.profits / a.vehicles.count %>
-    </li>
-  <% end %>
-</ul>
+    </div>
+  </div>
+<% end %>
