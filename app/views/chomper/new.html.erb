@@ -1,2 +1,7 @@
 <h1>Auction Edge Application Problem</h1>
-<p>yay</p>
+
+<%= form_tag('/upload', multipart: true) do %>
+  <%= file_field_tag 'auctions' %>
+  <%= submit_tag 'Submit' %>
+<% end %>
+

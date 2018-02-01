@@ -1,0 +1,8 @@
+<% @auctions.each do |a| %>
+  <p>
+    <%= a.inspect %>
+    <% a.vehicles.each do |v| %>
+      <%= v.inspect %>
+    <% end %>
+  </p>
+<% end %>
