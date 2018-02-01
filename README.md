@@ -2,7 +2,8 @@
 
 This app is part of Ellen Wondra's application to work at Auction Edge.
 
-It assumes you have Rails correctly installed on your machine.
+It assumes you have Rails correctly installed on your machine and that you are familiar with 
+working from the terminal.
 
 These seemed like fair assumptions given the instructions, but if not, they can be adjusted :)
 
